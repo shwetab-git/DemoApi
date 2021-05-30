@@ -30,18 +30,12 @@ public class BooksController {
 	@Autowired(required = true)
 	BookService bookService;
 
-	@GetMapping("v1/studyMaterial/getBooks/{id}")
-	public ResponseEntity getBookById(Integer id)
-	{
-		if(id==null)
-		{
-			return new ResponseEntity(HttpStatus.BAD_REQUEST);
-		}
-		else
-		{
-			return bookService.getBookById(id);
-		}
-	}
+	/*
+	 * @GetMapping("v1/studyMaterial/getBooks/{id}") public ResponseEntity
+	 * getBookById(Integer id) { if(id==null) { return new
+	 * ResponseEntity(HttpStatus.BAD_REQUEST); } else { return
+	 * bookService.getBookById(id); } }
+	 */
 
 	@PostMapping("/create")
 	public boolean createPerson(@RequestBody Books book)
