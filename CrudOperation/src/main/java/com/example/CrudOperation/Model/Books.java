@@ -14,6 +14,7 @@ public class Books {
 	private String bookName;
 	private String authorname;
 	private Integer price;
+	private Integer pages;
 	public int getBookid() {
 		return bookid;
 	}
@@ -38,12 +39,19 @@ public class Books {
 	public void setPrice(int price) {
 		this.price = price;
 	}
-	public Books(Integer bookid, String bookName, String authorname, Integer price) {
+	public int getpages() {
+		return pages;
+	}
+	public void setpages(int pages) {
+		this.pages = pages;
+	}
+	public Books(Integer bookid, String bookName, String authorname, Integer price,Integer pages) {
 		super();
 		this.bookid = bookid;
 		this.bookName = bookName;
 		this.authorname = authorname;
 		this.price = price;
+		this.pages=pages;
 	}
 	public Books() 
 	{}
